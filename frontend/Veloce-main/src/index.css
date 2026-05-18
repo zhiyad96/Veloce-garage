@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+@plugin "daisyui";
+
+:root {
+  --surface-base: #f4f1ee;
+  --surface-soft: #f8f7f5;
+  --accent-main: #b91c1c;
+  --accent-dark: #111827;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Manrope", "Segoe UI", sans-serif;
+  background: var(--surface-base);
+  color: #18181b;
+}
+
+.font-display {
+  font-family: "Bebas Neue", "Arial Narrow", sans-serif;
+  letter-spacing: 0.04em;
+}
+
+.bg-grid-dark {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+.hero-reveal {
+  animation: heroReveal 0.9s ease-out forwards;
+}
+
+.hero-reveal-delay {
+  animation: heroReveal 0.9s ease-out 0.16s forwards;
+  opacity: 0;
+}
+
+@keyframes heroReveal {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
